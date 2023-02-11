@@ -1,0 +1,107 @@
+1.setsize()-
+2.by linktext();
+3.by partiallinktext();
+4.by css selector();
+5.gettext();
+6.gettitle();
+7.getcurrenturl();
+8.getattribute();
+9.isDisplayed();
+setSize:
+public class SeleniumProject {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Lenovo\\Desktop\\abitha\\chromedriver.exe");
+    WebDriver driver=new ChromeDriver();
+    driver.get("https://omayo.blogspot.com/2013/05/page-one.html");
+    Dimension d=new Dimension(500, 500);
+    driver.manage().window().setSize(d);
+   
+	}
+}
+byLinkText:
+public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Lenovo\\Desktop\\abitha\\chromedriver.exe");
+    WebDriver driver=new ChromeDriver();
+    driver.get("https://omayo.blogspot.com/2013/05/page-one.html");
+    Thread.sleep(1000);
+    driver.findElement(By.linkText("compendiumdev")).click();
+    Dimension d=new Dimension(500, 500);
+    driver.manage().window().setSize(d);
+   
+	}
+}
+byPartialLinkText:
+public class SeleniumProject {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Lenovo\\Desktop\\abitha\\chromedriver.exe");
+    WebDriver driver=new ChromeDriver();
+    driver.get("https://omayo.blogspot.com/2013/05/page-one.html");
+    Thread.sleep(1000);
+    driver.findElement(By.partialLinkText("theautomate")).click();
+    Dimension d=new Dimension(500, 500);
+    driver.manage().window().setSize(d);
+   
+	}
+}
+byCssSelector:
+public class SeleniumProject {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Lenovo\\Desktop\\abitha\\chromedriver.exe");
+    WebDriver driver=new ChromeDriver();
+    driver.get("https://omayo.blogspot.com/2013/05/page-one.html");
+    Thread.sleep(1000);
+    driver.findElement(By.cssSelector(" button[value='LogIn'] ")).click();
+    Dimension d=new Dimension(500, 500);
+    driver.manage().window().setSize(d);
+   
+	}
+}
+getCurrentUrl();
+public class SeleniumProject {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Lenovo\\Desktop\\abitha\\chromedriver.exe");
+    WebDriver driver=new ChromeDriver();
+    driver.get("https://omayo.blogspot.com/");
+    Thread.sleep(1000);
+  String url = driver.getCurrentUrl();
+  System.out.println(url);
+	}
+}
+getTitle();
+public class SeleniumProject {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Lenovo\\Desktop\\abitha\\chromedriver.exe");
+    WebDriver driver=new ChromeDriver();
+    driver.get("https://omayo.blogspot.com/");
+    Thread.sleep(1000);
+  String Title = driver.getTitle();
+  System.out.println(Title);
+	}
+}
+getText();
+public class SeleniumProject {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Lenovo\\Desktop\\abitha\\chromedriver.exe");
+    WebDriver driver=new ChromeDriver();
+    driver.get("http://www.tutorialsninja.com/demo/");
+    Thread.sleep(1000);
+   String text = driver.findElement(By.id("pah")).getText();
+    System.out.println(text);
+    Dimension d=new Dimension(500, 500);
+    driver.manage().window().setSize(d);
+   
+	}
+}
